@@ -1,17 +1,23 @@
-## 异步流式日志库
+## 支持C++20fmt风格的日志库
 
 ### 支持四种日志级别
 + debug
 + info
-+ warring
++ warning
 + error
 
-### 有两种使用方式
+### 使用方式
 ```cpp
-LOG(INFO) << "hello" << ENDL;
-LOG_INFO << "hello" << ENDL;
-``` 
+info("hello{}", 123);
+```
+
+### 设置过滤日志等级
+```cpp
+setLevel(level::debug);
+```
+
 ### 后期扩展
-- [ ] 支持C++23 的`print`式风格
+
+- [ ] 支持流式风格日志
 - [ ] 支持写入文件
 
